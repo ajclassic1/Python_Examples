@@ -182,3 +182,13 @@ DICT_C = {
 }
 
 print(DICT_C)
+
+from collections import defaultdict
+# defaultdict is like a dict but instead of providing KeyError if key does not exist
+# it will return the results from the supplied no argument function (known as the default factory)
+# in case below, dict_x['unknown_key'] would return value list() .... i.e. an empty list []
+dict_x = defaultdict(list)
+print(dict_x['unknown_key'])
+# in case below, dict_x['unknown_key'] would return value lambda: 'Vanilla' .... i.e. a string 'Vanilla'
+dict_x = defaultdict(lambda: 'Vanilla')
+print(dict_x['unknown_key'])
