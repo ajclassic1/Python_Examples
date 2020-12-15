@@ -58,3 +58,8 @@ print(LIST_D)
 names = {1: ["Alan"], 2: ["Melanie"], 3: ["Johnson"]}
 LIST_E = [j for i in range(1,4) for j in names[i]]
 print(LIST_E)
+
+# converts a list of columns to a string
+# SELECT a, b, c
+string_x = 'SELECT ' + ', '.join(['a, b, c'])
+print(string_x)

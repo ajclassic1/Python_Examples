@@ -43,7 +43,7 @@ print(dict_x)
 # and the value is a tuple of lists (1 list per row containing the remaining field values for that row)
 # {'CH': (['0001', 1000, 100], ['0002', 500, 50]), 'MX': (['0003', 100, 10], ['0004', 50, 5])}
 z = dict((key, tuple(value)) for key, value in dict_x.items())
-print ('z is ...')
+print('z is ...')
 print(z)
 
 # create a new directory, where the 2nd field of each row (business_unit) becomes a key
