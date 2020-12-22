@@ -1,4 +1,4 @@
-from pyspark.sql import Row, SparkSession, types as T
+from pyspark.sql import Row, types as T
 
 # create a Row object using 1st method (using name=value)
 # Row(id=1, name='Alan', dob='1962-11-25', chelsea_fan=True)

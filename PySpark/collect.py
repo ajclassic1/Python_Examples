@@ -1,4 +1,4 @@
-from pyspark.sql import Row, SparkSession, types as T
+from pyspark.sql import Row, SparkSession
 from collections import defaultdict
 spark = SparkSession.builder.config("spark.some.config.option", "config-value").getOrCreate()
 
@@ -88,5 +88,7 @@ message_per_country_dict = {
 }
 print('message_per_country_dict is ...')
 print(message_per_country_dict)
-
 # message_per_country_dict.values.tolist()
+
+
+

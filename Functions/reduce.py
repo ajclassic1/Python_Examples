@@ -1,6 +1,6 @@
 from functools import reduce
 from pyspark.sql import functions as F
-from PySpark.Dataframe_samples import dfPersons, dfCars
+from PySpark.Dataframe_samples import dfCars
 
 # adds the elements of a list together: (1 + 2 + 3)
 x = reduce(lambda x, y: x + y, [1, 2, 3])

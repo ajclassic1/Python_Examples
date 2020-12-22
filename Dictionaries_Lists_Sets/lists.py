@@ -63,3 +63,15 @@ print(LIST_E)
 # SELECT a, b, c
 string_x = 'SELECT ' + ', '.join(['a, b, c'])
 print(string_x)
+
+# deep copy a list, y: [1, 2, 3]
+x = [1,2,3]
+y = x[:]
+x.append(4)
+print(y)
+
+# soft copy a lis (beware if original list changes), y: [1, 2, 3, 4]
+x = [1,2,3]
+y = x
+x.append((4))
+print(y)

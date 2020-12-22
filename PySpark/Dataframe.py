@@ -7,7 +7,7 @@ spark = SparkSession.builder.config("spark.some.config.option", "config-value").
 # [Row(id=1, name='Alan', dob='1962-11-25', chelsea_fan=True),
 #  Row(id=2, name='Melanie', dob='1963-10-21', chelsea_fan=False)]
 print('dfPersons.collect() is ...')
-print(dfPersons.collect())
+# print(dfPersons.collect())
 
 # convert dataframe to a temporary view, queryable via SQL
 dfPersons.createOrReplaceTempView('A')
@@ -25,4 +25,6 @@ join_cond = reduce(lambda x, y: x & y, join_cond)
 print('join_cond is ...')
 print(join_cond)
 dfX = dfCars.join(dfPersons, join_cond, 'left')
-print(dfX.collect())
+# print(dfX.collect())
+
+dfPersons.join(dfPersons, 'person_id', 'left').show()
