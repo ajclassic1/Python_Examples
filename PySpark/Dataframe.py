@@ -28,3 +28,5 @@ dfX = dfCars.join(dfPersons, join_cond, 'left')
 # print(dfX.collect())
 
 dfPersons.join(dfPersons, 'person_id', 'left').show()
+
+#

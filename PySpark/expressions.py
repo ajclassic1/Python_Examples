@@ -1,4 +1,4 @@
-from pyspark.sql import functions as F # noqa
+from pyspark.sql import functions as F, types as T  # noqa
 from PySpark.Dataframe_samples import dfCars
 
 dfX = dfCars.select('name', 'owner_id', 'car_washer_id')
@@ -29,4 +29,8 @@ dfX = dfCars.withColumn('col_a', F.concat_ws('', F.col('car_id'), F.lit('-'), F.
             .withColumn('col_b', F.concat_ws('', *x))\
             .withColumn('col_c', F.concat_ws('', *y))\
             .selectExpr('col_a', 'col_b', 'col_c')
+# print(dfX.collect())
+
+# manipulate column types
+dfX = dfCars.select(F.col('car_id').cast(T.StringType()).alias('str_car_id'))
 print(dfX.collect())

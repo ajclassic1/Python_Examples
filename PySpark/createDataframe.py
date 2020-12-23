@@ -39,8 +39,8 @@ schema = T.StructType([
     T.StructField("person_id", T.IntegerType()),
     T.StructField("name", T.StringType()),
     T.StructField("dob", T.DateType()),
-    T.StructField("chelsea_fan", T.BooleanType()),
 ])
+schema.add(T.StructField("chelsea_fan", T.BooleanType()))
 data = [
     {'person_id': 1, 'name': 'Alan', 'dob': date(1962, 11, 25), 'chelsea_fan': True},
     {'person_id': 2, 'name': 'Melanie', 'dob': date(1963, 10, 21), 'chelsea_fan': False}
@@ -49,3 +49,8 @@ dfPersons2 = spark.createDataFrame(data, schema)
 print('dfPersons2 is ...')
 print(dfPersons2.show())
 print(dfPersons2.schema)
+
+print('list of schema field names is ...')
+print(schema.fieldNames())
+
+
